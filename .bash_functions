@@ -8,4 +8,4 @@ numfiles() {
     echo "$N files in $1";
 }
 # make dir and go to it
-mkcd() { mkdir -p $1; cd $1 }
+mkcd() { mkdir -p $1; cd $1; }

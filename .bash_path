@@ -1,1 +1,2 @@
-# Path to various stuff e.g. Android SDK
+# Add things installed with yarn global to path
+export PATH="$HOME/.yarn/bin:$PATH"
