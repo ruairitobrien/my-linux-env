@@ -35,4 +35,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias hs='history | grep'
 
 # For having configs in a git repo
-alias config='/usr/bin/git --git-dir=/home/ruairi/.cfg/ --work-tree=/home/ruairi'
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
