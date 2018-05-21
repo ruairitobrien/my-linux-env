@@ -6,13 +6,12 @@
 	excludesfile = ~/.gitignore
 [push]
 	default = simple
-[pull]
-	rebase = true
 [diff]
   mnemonicprefix = true
 [alias]
   # list all aliases
   la = "!git config -l | grep alias | cut -c 7-"
+  co = checkout 
   st = status -s
   cm = commit -m
   d = diff --word-diff
@@ -48,3 +47,5 @@
   merge = refs/heads/develop
 [branch]
 	autosetuprebase = always
+[remote "origin"]
+	push = HEAD
