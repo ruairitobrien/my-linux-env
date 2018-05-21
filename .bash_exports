@@ -7,3 +7,7 @@ export TTC_BOTS='tinycarebot,selfcare_bot,magicrealismbot'
 export TTC_REPOS='~/Dev'
 export TTC_WEATHER='Cork'
 export TTC_APIKEYS=false
+
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
+
