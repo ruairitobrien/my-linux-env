@@ -1,6 +1,6 @@
 # create .tar.gz (can never remember that command) e.g. > targz mydir
 targz() { tar -zcvf $1.tar.gz $1; rm -r $1; }
-# extra .tar.gz e.g. > untargs mydir
+# extra .tar.gz e.g. > untargz mydir
 untargz() { tar -zxvf $1; rm -r $1; }
 # count files in dir e.g. > numfiles ~/Desktop
 numfiles() { 
