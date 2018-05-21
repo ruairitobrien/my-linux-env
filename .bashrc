@@ -8,8 +8,8 @@ case $- in
       *) return;;
 esac
 
-
-for file in ~/.{bash_path,bash_prompt,bash_exports,bash_aliases,bash_functions}; do
+# bash_work is not saved to config repo and contains work specific stuff
+for file in ~/.{bash_exports,bash_path,bash_prompt,bash_aliases,bash_functions,bash_work}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
