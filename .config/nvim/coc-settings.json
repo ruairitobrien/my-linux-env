@@ -1,0 +1,18 @@
+{
+	"prettier.formatterPriority": 100,
+	"suggest.detailMaxLength": 200,
+	"coc.preferences.formatOnType": false,
+  	"coc.preferences.formatOnSaveFiletypes": [
+		"go",
+		"javascript",
+		"typescript",
+		"typescriptreact",
+		"java",
+		"json",
+		"jsonc",
+		"python",
+		"rust",
+		"yaml"
+	],
+	"yaml.format.enable": true
+}
