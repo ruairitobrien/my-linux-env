@@ -1155,7 +1155,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/ruairi</string>
+			<string>$HOME</string>
 		</dict>
 	</array>
 	<key>NoSyncAllAppVersions</key>
@@ -2039,7 +2039,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/ruairi/.config/iterm</string>
+	<string>$HOME/.config/iterm</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
