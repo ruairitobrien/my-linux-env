@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>iconid</key>
+	<string>952032BB-FCC8-46FE-9BB6-37F86FA59AFE</string>
+	<key>iconisuserspecified</key>
+	<true/>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>actionconfig</key>
+			<dict>
+				<key>path</key>
+				<string>/Applications/Safari.app</string>
+			</dict>
+			<key>actionuid</key>
+			<string>remote.alfred.launchfile</string>
+			<key>buttoniconid</key>
+			<string>5B14F5A3-FC6E-44D9-88FB-6350AAF2291A</string>
+			<key>buttonlabel</key>
+			<string>Safari</string>
+			<key>itemuid</key>
+			<string>B7CED262-8D11-4753-8A77-0CE756B1554A</string>
+		</dict>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+	</array>
+	<key>subtitle</key>
+	<string>Launch your Applications</string>
+	<key>title</key>
+	<string>Applications</string>
+</dict>
+</plist>
