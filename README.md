@@ -14,11 +14,17 @@ I was previously doing this all in bash but have moved to zsh.
 
 ## ITerm2 and Alfred
 
-I set both of these to sync setting from a directory.
+I set both of these to sync setting from a directory. Obviously these both need to be installed.
 
 `~/.config/iterm` for ITerm2 and `~/.config/alfred` for alfred.
 
 I used the instructions here: <https://codeolsen.com/productivity/tools/iterm-sync-dropbox/>
+
+## Neovim
+
+Neovim need to be installed too. I also use homebrew so
+
+`brew install neovim`
 
 ## First Time
 
@@ -45,7 +51,7 @@ config remote add origin {your repo URL}
 Now you can add the files you want to track.
 
 ```bash
-config add .config/iterm .config/alfred .zsh_aliases .zshrc .gitconfig .gitignore
+config add .config/iterm .config/alfred .config/nvim .zsh_aliases .zshrc .gitconfig .gitignore
 ```
 
 ```bash
