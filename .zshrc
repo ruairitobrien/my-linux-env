@@ -1,30 +1,14 @@
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/dev/flutter/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
-export NO_PROXY=download.cypress.io
 export DEFAULT_USER="$(whoami)"
-
-export PATH=$(pyenv root)/shims:$PATH
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.creds/dev-gcp"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="nanotech"
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -48,6 +32,27 @@ for file in ~/.{zsh_secrets,zsh_aliases}; do
 done
 unset file
 
+# SDK Man
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# GCP
+export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.creds/dev-gcp"
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Flutter
+export PATH="$HOME/dev/flutter/bin:$PATH"
+
+# Python
+export PATH=$(pyenv root)/shims:$PATH
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# Node
+export NO_PROXY=download.cypress.io
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -75,5 +80,7 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 npm config delete prefix
-npm config set prefix $NVM_DIR/versions/node/v12.2.0
+npm config set prefix "$NVM_DIR/versions/node/$(node --version)"
+
+# Java
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
