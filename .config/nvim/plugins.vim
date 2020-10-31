@@ -1,12 +1,9 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'dikiaap/minimalist'
-Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
 Plug 'leafgarland/typescript-vim'
 Plug 'junegunn/fzf.vim'
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 

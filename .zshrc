@@ -76,3 +76,4 @@ load-nvmrc
 
 npm config delete prefix
 npm config set prefix $NVM_DIR/versions/node/v12.2.0
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
