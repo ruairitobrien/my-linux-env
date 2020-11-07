@@ -90,3 +90,11 @@ npm config set prefix "$NVM_DIR/versions/node/$(node --version)"
 
 # Java
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# Ruby
+
+export GEM_HOME="$HOME/.gem"
+export PATH="/usr/local/opt/ruby/bin:$GEM_HOME/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
