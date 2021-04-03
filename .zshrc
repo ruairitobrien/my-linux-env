@@ -21,6 +21,7 @@ plugins=(
   history
   jsontools
   vscode
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -30,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 for file in ~/.{zsh_secrets,zsh_aliases}; do
   [ -r "$file" ] && source "$file"
 done
-unset file
+#unset file
 
 # SDK Man
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -63,28 +64,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export NODE_PATH="$(which node)"
-
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
 npm config delete prefix
 npm config set prefix "$NVM_DIR/versions/node/$(node --version)"
 
@@ -98,3 +77,6 @@ export PATH="/usr/local/opt/ruby/bin:$GEM_HOME/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+
+# ISTIO
+export PATH="$PATH:$HOME/dev/istio-1.8.2/bin"
